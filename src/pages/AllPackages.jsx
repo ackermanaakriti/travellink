@@ -72,7 +72,7 @@ const AllPackages = () => {
             <MetaDecorator title="Packages"/>
 
             <div className='w-full min-h-[80vh] lg:px-globalPadding px-[11px] my-[2%]'>
-                <div className='grid grid-cols-1 lg:grid-cols-3 gap-[51px] mt-3'>
+                <div className="flex flex-row flex-wrap md:-mx-7 mx-0  mt-3 gap-y-8 justify-center ">
                     {
                     array ?. map((item, index) => (
                         <PackagesCard key={index}

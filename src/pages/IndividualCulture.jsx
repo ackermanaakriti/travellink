@@ -24,15 +24,17 @@ const IndividualCulture = () => {
     FetchNavCultureData(slug)
       .then((res) => {
         setLoading(false);
-        setNavCountryData(res.data.data);
+        setNavCountryData(res.data);
       })
       .catch((err) => {
         console.log(err);
         setLoading(false);
       });
   }, [slug]);
-  const CountryDataA = navCountryData?.information;
-  const CountryDataB = navCountryData?.packages;
+console.log( "from culture",navCountryData)
+  const CountryDataA = navCountryData?.data?.information;
+  console.log(CountryDataA)
+  const CountryDataB = navCountryData?.data?.packages;
 
   // const [destinationData, setDestinationData] = useState([]);
 
@@ -90,8 +92,8 @@ const IndividualCulture = () => {
         <>
           <div>
             <PageTopComponent
-              title={navCountryData?.country?.name}
-              image={navCountryData?.country?.flag}
+              title={navCountryData?.message?.name}
+              image={navCountryData?.message?.image}
               setTextA={true}
               setTextB={false}
             />
@@ -100,12 +102,12 @@ const IndividualCulture = () => {
           <div className="w-full lg:px-globalPadding px-[11px] lg:py-[2%] pt-[5%]">
             <div className="pt-8">
               <PageTopTextComponent
-                title={navCountryData?.country?.title}
-                discription={navCountryData?.country?.description}
+                title={navCountryData?.message?.name}
+                discription={navCountryData?.message?.details}
               />
             </div>
 
-            <div className="py-[4%] flex flex-col gap-[32px]">
+            {/* <div className="py-[4%] flex flex-col gap-[32px]">
               {CountryDataA?.map((item, index) => (
                 <ServicesCard
                   data={item}
@@ -116,7 +118,7 @@ const IndividualCulture = () => {
                   wordLimit={120}
                 />
               ))}{" "}
-            </div>
+            </div> */}
 
             <div className="py-[3%]">
               {array?.length > 0 && (
@@ -124,14 +126,18 @@ const IndividualCulture = () => {
                   {siteInfo?.category_destination}
                 </h2>
               )}
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-[51px] mt-3">
+              <div className="flex flex-row flex-wrap md:-mx-7 mx-0  mt-3 gap-y-5 justify-center ">
                 {array?.map((item, index) => (
+                  <>
                   <PackagesCard
                     key={index}
                     data={item}
                     Package={item?.name}
                     link={`/details/${item?.slug}`}
                   />
+                 
+                
+                  </>
                 ))}{" "}
               </div>
               <div className="hover:opacity-90 mt-[4%] flex justify-center">

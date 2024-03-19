@@ -1,4 +1,6 @@
 export const navItems = [   
+
+
     {
         menuTitle: "About Us",
         link: "",
@@ -26,12 +28,14 @@ export const navItems = [
         slug: "services",
         Catagories:''
     },    
+    
     {
         menuTitle: "Contact Us",
         link: "/contactus",
         slug: "contact-us",
         Catagories:''
-    }, {
+    },
+     {
         menuTitle: "Testimonials",
         link: "/testimonials",
         slug: "testimonials",

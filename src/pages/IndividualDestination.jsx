@@ -28,6 +28,7 @@ const IndividualDestination = () => {
         setLoading(false);
       });
   }, [id]);
+  console.log('from country',navCountryData)
   const CountryDataA = navCountryData?.packages;
   const CountryDataB = navCountryData?.information;
 

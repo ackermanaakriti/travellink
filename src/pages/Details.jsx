@@ -34,6 +34,7 @@ const Details = () => {
   }, [slug]);
 
   const mainData = packageDetailsData?.package;
+  console.log(packageDetailsData,'from detail')
 
   const { setOverlay } = useGlobalContext();
   const [searchParams] = useSearchParams();

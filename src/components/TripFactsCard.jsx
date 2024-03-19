@@ -51,7 +51,7 @@ const TripFactsCard = ({data, handleBtnClickA, handleShareClick}) => {
                     <div className='flex gap-[16px] font-inter items-center font-normal text-[#2D3134] '>
                         <div><TbTrekking className='w-[24px] h-24px'/></div>
                         <div>
-                            <strong>Trip :
+                            <strong>Trip  :
                             </strong>
                             {trip}</div>
                     </div>

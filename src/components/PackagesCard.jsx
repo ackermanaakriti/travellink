@@ -17,7 +17,7 @@ const PackagesCard = ({data, link, Package}) => {
     const [isButtonHovered, setIsButtonHovered] = useState(false);
 
     return (
-        <div>
+        <div className='xl:w-1/3 md:w-1/2 w-full md:px-7 px-0'>
             <div className='w-full'>
                 <div className='shadow-md overflow-hidden p-4 bg-white'>
                     <div className='w-full relative h-[255px] overflow-hidden rounded-[24px]'>
@@ -36,7 +36,7 @@ const PackagesCard = ({data, link, Package}) => {
                             </div>
                             <div className='flex gap-[16px] font-inter items-center font-normal text-[#2D3134]'>
                                 <div><TbTrekking className='w-[24px] h-24px'/></div>
-                                <div>Package : {Package}</div>
+                                <div>Trip Category : {Package}</div>
                             </div>
                             <div className='flex gap-[16px] font-inter items-center font-normal text-[#2D3134] '>
                                 <div><ImPriceTag className='w-[24px] h-24px'/></div>

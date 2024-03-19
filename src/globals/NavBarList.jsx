@@ -18,6 +18,7 @@ const NavBarList = () => {
       .catch((err) => console.log(err));
   }, []);
 
+
   const [activeNavItemIndex, setActiveNavItemIndex] = useState();
   const [activeNavItemIndexA, setActiveNavItemIndexA] = useState();
   const [activeNavItemIndexB, setActiveNavItemIndexB] = useState();
@@ -42,11 +43,12 @@ const NavBarList = () => {
         <Dropdown categories={navListData} />
         {navItems.map((item, index) => (
           <div key={index} className="font-inter font-semibold">
+            {/* navitems mapping */}
             {item.Catagories?.length > 0 ? (
               <div
                 onMouseEnter={() => setActiveNavItemIndex(index)}
                 className={`whitespace-nowrap ${
-                  navActive === item?.slug && "font-bold text-[17px]"
+                  navActive === item?.slug && "font-bold text-[px]"
                 } relative flex flex-col items-center`}
               >
                 <p>{item?.menuTitle}</p>
@@ -65,13 +67,14 @@ const NavBarList = () => {
                       </div> */}
                       <div>
                         <div className="w-max absolute top-0 left-[50%] transform -translate-x-[50%] bg-white flex flex-col text-dark text-start font-[16px] z-30 border border-[#A3A3A3] shadow-lg">
+                          {/* catergory mapping */}
                           {item.Catagories.map((item, index) => (
                             <div
                               onMouseEnter={() => {
                                 setActiveNavItemIndexA(index);
                               }}
                               key={index}
-                              className={`relative hover:text-blue text-[#2D3134] py-[15px] px-[10px] flex justify-between gap-[20px] border-b border-[#2D3134]`}
+                              className={`relative hover:text-blue text-[#34342d] py-[15px] px-[10px] flex justify-between gap-[20px] border-b border-[#2D3134]`}
                             >
                               <Link to={item?.link}>
                                 <p>{item?.menuTitle}</p>

@@ -20,10 +20,10 @@ const PopularTrips = ({data}) => {
         <div className='w-full lg:px-globalPadding px-[11px] my-[2%]'>
             <div className='flex flex-col'>
                 <div>
-                    <h2 className='font-semibold font-inter text-[32px] text-[#2D3134] leading-[32px] text-center'>{data?.home_page_trip_title}</h2>
+                    <h2 className='font-semibold font-inter text-[32px] pb-[30px] text-[#2D3134] leading-[32px] text-center'>{data?.home_page_trip_title}</h2>
                 </div>
                 <div>
-                    <div className='grid grid-cols-1 lg:grid-cols-3 gap-[51px] mt-8'>
+                    <div className="flex flex-row flex-wrap md:-mx-7 mx-0  mt-3 gap-y-5 justify-center ">
                         {
                         popularTripsData?.slice(0, 6)?.map((item, index) => (
                             <PackagesCard key={index}

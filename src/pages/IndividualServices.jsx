@@ -20,9 +20,10 @@ const IndividualServices = () => {
     useEffect(() => {
         FetchindividualServicesData(slug).then(res => {
             setIndividualServicesData(res.data.data);
+           
         }).catch((err) => console.log(err));
     }, [slug])
-
+    console.log(individualServicesData)
     const serviceData = individualServicesData ?. service;
     const relatedServiceData = individualServicesData ?. relatedPackage;
     // useEffect(() => {
