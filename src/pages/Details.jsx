@@ -226,16 +226,19 @@ const Details = () => {
               </div>
             </div>
           </div>
-          <div className="pb-[3%] w-full lg:px-globalPadding px-[11px] overflow-x-hidden">
+          <div className="pb-[3%] w-full  px-[11px] overflow-x-hidden">
             {packageDetailsData?.relatedPackage?.length > 0 && (
               <h2 className="font-semibold font-inter text-[32px] text-[#0E9EDA] leading-[32px] text-center pb-[2%]">
                {siteInfo?.package_detail_title}
               </h2>
             )}
-
+            <div>
             <RelatedPackageSlider
               relatedPackagesListData={packageDetailsData?.relatedPackage}
-            />
+            /> </div>
+
+
+           
           </div>
         </div>
       )}

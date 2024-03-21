@@ -25,6 +25,7 @@ const AboutUs = () => {
       })
       .catch((err) => console.log(err));
   }, []);
+  console.log(aboutUsData)
 
   const [topaboutUsData, setTopaboutUsData] = useState({});
   useEffect(() => {
@@ -69,6 +70,7 @@ const AboutUs = () => {
     setNavActive("about-us");
   }, []);
   const { siteInfo } = useGlobalContext();
+  console.log(siteInfo)
   return (
     <>
       <MetaDecorator title="About Us" />
@@ -121,14 +123,17 @@ const AboutUs = () => {
             <h2 className="font-semibold font-inter text-[32px] text-[#2D3134] leading-[32px] text-center">
             {siteInfo?.about_us_associated}
             </h2>
-            <div className="flex gap-[18px] justify-center pt-8">
+            <div className="flex flex-wrap gap-[18px] justify-center items-center pt-8">
               {partnerData?.map((item, index) => (
-                <img
+                <figure className="h-[350px] w-[350px] md:h-[200px] md:w-[200px] sm:h-[10px] sm:w-[100px]  ">
+<img
                   src={item?.image}
                   key={index}
                   alt="nepGov Image"
-                  className="h-[80px] w-[80px] object-contain"
+                  className=" h-[100%] w-[100%] object-cover"
                 />
+                </figure>
+                
               ))}
               {/* <img src={nattaLogo}
                             alt='nattaLogo Image'

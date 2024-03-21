@@ -8,11 +8,11 @@ const BookTab = ({ tabNames, activeTabId, handleTabClick }) => {
         {tabNames.map((item, index) => (
           <li
             key={index}
-            className={`grow ${
+            className={`grow  text-[12px] lg:text-[17px] md:text-[15px] sm:text-[14px] ${
               activeTabId === item?.id
                 ? "bg-[#0E9EDA] text-white"
                 : "bg-transparent text-dark"
-            } font-inter cursor-pointer text-center py-[10px] rounded-t-[5px] lg:text-[17px] text-[9px] p-2 font-semibold whitespace-nowrap`}
+            } font-inter cursor-pointer text-center py-[10px] rounded-t-[5px]  text-[9px] p-2 font-semibold whitespace-nowrap`}
             onClick={() => handleTabClick(item?.id)}
           >
             {item?.name}

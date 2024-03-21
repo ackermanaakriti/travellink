@@ -89,21 +89,20 @@ const IndividualServices = () => {
                         {
                         array ?. length > 0 && <h2 className='font-semibold font-inter text-[32px] text-[#0E9EDA] leading-[32px] text-center pb-[2%]'>Some Trekking Trips</h2>
                     }
-                        <div className='grid grid-cols-1 lg:grid-cols-3 gap-[51px] mt-3'>
-                            {
-                            array ?. map((item, index) => (
-                                <PackagesCard key={index}
-                                    data={item}
-                                    Package={
-                                        item ?. name
-                                    }
-                                    link={
-                                        `/details/${
-                                            item ?. slug
-                                        }`
-                                    }/>
-                            ))
-                        } </div>
+                         <div className="flex flex-row flex-wrap md:-mx-7 mx-0  mt-3 gap-y-8 justify-center ">
+                {array?.map((item, index) => (
+                  <>
+                  <PackagesCard
+                    key={index}
+                    data={item}
+                    Package={item?.name}
+                    link={`/details/${item?.slug}`}
+                  />
+                 
+                
+                  </>
+                ))}{" "}
+              </div>
                         <div className="hover:opacity-90 mt-[4%] flex justify-center">
                             {
                             showBtn && (

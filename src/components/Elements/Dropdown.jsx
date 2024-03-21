@@ -30,7 +30,7 @@ const Dropdown = ({ categories }) => {
         </p>
         {isDetinationHovered && categories?.length > 0 && (
           <div
-            className={`mt-[-0px] whitespace-nowrap font-bold text-[17px] relative flex flex-col items-center`}
+            className={`mt-[0] whitespace-nowrap font-bold text-[17px] relative flex flex-col items-center`}
           >
             <div className="relative">
               {/* <div className="absolute top-0 left-0 rotate-45 text-[8px] z-40 border-l border-t border-[#A3A3A3] text-white bg-white">
@@ -59,7 +59,7 @@ const Dropdown = ({ categories }) => {
                           ) : (
                             <Link
                               key={index}
-                              to={`/country/${item?.id}`}
+                            
                             >
                               <p>{item?.name}</p>
                             </Link>

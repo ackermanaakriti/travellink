@@ -14,7 +14,7 @@ const Itineraries = ({itinerary}) => {
                 <div className="w-full mt-[30px] flex flex-col gap-[17px]">
                     {
                     itinerary?.map((item, index) => (
-                        <QA key={index}
+                        <QA className='text-[40px]' key={index}
                             question={
                                 item ?. title
                             }

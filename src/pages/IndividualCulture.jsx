@@ -100,7 +100,7 @@ console.log( "from culture",navCountryData)
           </div>
 
           <div className="w-full lg:px-globalPadding px-[11px] lg:py-[2%] pt-[5%]">
-            <div className="pt-8">
+            <div className="pt-3">
               <PageTopTextComponent
                 title={navCountryData?.message?.name}
                 discription={navCountryData?.message?.details}

@@ -35,8 +35,8 @@ const QA = ({
                                
                             }
                         }
-                        className={`min-w-[15%] max-w-[15%] bg-[#0E9EDA] rounded-[5px] flex items-center justify-center`}>
-                        <div className="w-full font-inter text-center py-2 px-3 text-white" dangerouslySetInnerHTML={{ __html: index }} />
+                        className={`min-w-[18%] max-w-[15%] bg-[#0E9EDA] rounded-[5px] flex items-center justify-center`}>
+                        <div className="w-full font-inter text-center py-1 px-3 overflow-hidden text-[15px] text-white" dangerouslySetInnerHTML={{ __html: index }} />
                     </div>
                     <div className="grow flex flex-col gap-[10px]">
                         <div className={
@@ -47,7 +47,7 @@ const QA = ({
                         <div className={
                             `${
                                 active ? "" : "hidden"
-                            } font-inter text-[#5B5F62] list_style`
+                            } font-inter text-[#5B5F62] text-[15px] list_style`
                         } 
                         dangerouslySetInnerHTML={{ __html: answer }} />
                     </div>

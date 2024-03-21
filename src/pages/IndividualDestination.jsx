@@ -96,7 +96,7 @@ const IndividualDestination = () => {
           </div>
 
           <div className="w-full lg:px-globalPadding px-[11px] lg:py-[2%] pt-[5%]">
-            <div className="pt-8">
+            <div className="pt-3">
               <PageTopTextComponent
                 title={navCountryData?.title}
                 discription={navCountryData?.description}
@@ -122,15 +122,19 @@ const IndividualDestination = () => {
                   {siteInfo?.category_destination}
                 </h2>
               )}
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-[51px] mt-3">
+              <div className="flex flex-row flex-wrap md:-mx-7 mx-0  mt-3 gap-y-7 justify-center ">
                 {array?.map((item, index) => (
+                  <>
                   <PackagesCard
                     key={index}
                     data={item}
                     Package={item?.name}
                     link={`/details/${item?.slug}`}
                   />
-                ))}
+                 
+                
+                  </>
+                ))}{" "}
               </div>
               <div className="hover:opacity-90 mt-[4%] flex justify-center">
                 {showBtn && (

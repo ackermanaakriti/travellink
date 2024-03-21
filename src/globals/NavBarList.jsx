@@ -26,7 +26,7 @@ const NavBarList = () => {
   const { navActive } = useGlobalContext();
 
   return (
-    <div className="flex gap-[18px] font-semibold font-inter text-[#0E9EDA] cursor-pointer">
+    <div className="flex gap-[30px] font-semibold font-inter text-[#0E9EDA] cursor-pointer">
       <Link to={'/'}>
       <p className={`${
                   navActive === 'home' && "font-bold text-[17px]"
@@ -47,7 +47,7 @@ const NavBarList = () => {
             {item.Catagories?.length > 0 ? (
               <div
                 onMouseEnter={() => setActiveNavItemIndex(index)}
-                className={`whitespace-nowrap ${
+                className={`whitespace-nowrap  ${
                   navActive === item?.slug && "font-bold text-[px]"
                 } relative flex flex-col items-center`}
               >
@@ -66,7 +66,7 @@ const NavBarList = () => {
                         <BsStopFill />
                       </div> */}
                       <div>
-                        <div className="w-max absolute top-0 left-[50%] transform -translate-x-[50%] bg-white flex flex-col text-dark text-start font-[16px] z-30 border border-[#A3A3A3] shadow-lg">
+                        <div className=" hello w-max absolute top-0 left-[50%]  transform -translate-x-[50%] bg-white flex flex-col text-dark text-start font-[16px] z-30 border border-[#A3A3A3] shadow-lg">
                           {/* catergory mapping */}
                           {item.Catagories.map((item, index) => (
                             <div
@@ -74,7 +74,7 @@ const NavBarList = () => {
                                 setActiveNavItemIndexA(index);
                               }}
                               key={index}
-                              className={`relative hover:text-blue text-[#34342d] py-[15px] px-[10px] flex justify-between gap-[20px] border-b border-[#2D3134]`}
+                              className={`relative  hover:text-blue text-[#34342d] py-[15px] px-[10px] flex justify-between gap-[20px] border-b border-[#2D3134]`}
                             >
                               <Link to={item?.link}>
                                 <p>{item?.menuTitle}</p>

@@ -42,23 +42,13 @@ const ResponsiveDropdown = ({categories, closeNav}) => {
                                     }
                                     className={`font-semibold whitespace-normal text-[16px] hover:text-blue text-[#2D3134] pt-2 px-[10px] flex justify-between items-center gap-[7px]`}>
                                     {
-                                    item ?. package_categories ?. length > 0 ? (
-                                        <p>{
+                                    item  &&  (
+                                        <Link
+                                        key={index}
+                                        to={`/country/${item?.id}`}>{
                                             item ?. name
-                                        }</p>
-                                    ) : (
-                                        <Link key={index}
-                                            to={
-                                                `/destination/${
-                                                    item ?. slug
-                                                }`
-                                            }
-                                            onClick={closeNav}>
-                                            <p>{
-                                                item ?. name
-                                            }</p>
-                                        </Link>
-                                    )
+                                        }</Link>
+                                    ) 
                                 }
                                     {
                                     item ?. package_categories.length > 0 && (
@@ -86,23 +76,13 @@ const ResponsiveDropdown = ({categories, closeNav}) => {
                                                     }
                                                     className={`font-semibold whitespace-normal items-center text-[16px] hover:text-blue text-[#2D3134] pt-2 pl-[15px] flex justify-between gap-[7px]`}>
                                                     {
-                                                    item ?. packages ?. length > 0 ? (
-                                                        <p>{
+                                                    item  && (
+                                                        <Link  key={index}
+                                                        to={`/location/${item?.slug}`}>{
                                                             item ?. name
-                                                        }</p>
-                                                    ) : (
-                                                        <Link key={index}
-                                                            to={
-                                                                `/destination/${
-                                                                    item ?. slug
-                                                                }`
-                                                            }
-                                                            onClick={closeNav}>
-                                                            <p>{
-                                                                item ?. name
-                                                            }</p>
-                                                        </Link>
-                                                    )
+                                                        } hello</Link>
+                                                    ) 
+                                                    
                                                 }
                                                     {
                                                     item ?. packages.length > 0 && (
