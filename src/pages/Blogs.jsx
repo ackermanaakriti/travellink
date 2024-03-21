@@ -45,6 +45,7 @@ const Blogs = () => {
                 </div>
 
                 <div className='py-[4%] flex flex-col gap-[32px]'>
+                 
                     {
                     blogsData.map((item, index) => (
                         <ServicesCard data={item}
@@ -54,7 +55,7 @@ const Blogs = () => {
                             }
                             link={`/blog/${item?.slug}`}
                             showbtn={true}
-                            wordLimit={120}
+                            wordLimit={50}
                             />
                     ))
                 } </div>

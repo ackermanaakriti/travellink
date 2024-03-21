@@ -15,6 +15,8 @@ const IndividualBlog = () => {
         }).catch((err) => console.log(err));
     }, [slug])
 
+    console.log(individualBlogData)
+
     const {setNavActive} = useGlobalContext();
     // Setting the nav state
     useEffect(() => {
@@ -62,19 +64,17 @@ const IndividualBlog = () => {
                             setTextA={true}
                             setTextB={false}/>
                     </div>
-                    <div className='w-full lg:px-globalPadding px-[11px] lg:py-[2%] pt-[5%] flex justify-between flex-col lg:flex-row'>
+                    <div className='w-full lg:px-globalPadding px-[11px] lg:py-[2%] pt-[5%] flex justify-between  flex-col lg:flex-row'>
 
                         <div>
-                            <PageTopTextComponent title={
-                                    individualBlogData ?. excerpt
+                            <PageTopTextComponent formatDate={formattedDate} title={
+                                    individualBlogData ?. title
                                 }
                                 discription={
                                     individualBlogData ?. details
                                 }/>
                         </div>
-                        <div className='font-inter font-medium pt-3 text-[#0E9EDA]'>
-                            <p>{formattedDate}</p>
-                        </div>
+                      
                         {/* <div className='flex flex-col items-center justify-center'>
                             <img src={individualBlogData?.image}
                                 alt='team Image'

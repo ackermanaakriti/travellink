@@ -30,13 +30,17 @@ const Dropdown = ({ categories }) => {
         </p>
         {isDetinationHovered && categories?.length > 0 && (
           <div
-            className={`mt-[0] whitespace-nowrap font-bold text-[17px] relative flex flex-col items-center`}
+            // className={`mt-[0] bg-black  whitespace-nowrap font-bold text-[17px] relative flex flex-col items-center`}
+            className="relative bg-[#851578] whitespace-nowrap"
           >
-            <div className="relative">
+         
               {/* <div className="absolute top-0 left-0 rotate-45 text-[8px] z-40 border-l border-t border-[#A3A3A3] text-white bg-white">
                 <BsStopFill />
               </div> */}
-              <div className="w-[150px] absolute top-0 left-[50%] transform -translate-x-[50%] bg-white flex flex-col text-dark text-start font-[16px] z-30 border border-[#A3A3A3] shadow-lg">
+              <div 
+              className="absolute top-[0px] left-[40%] transform -translate-x-[50%] bg-white flex flex-col text-dark text-start font-[16px] z-30 border border-[#A3A3A3] shadow-lg" 
+               >
+                <div className="w-[220px]">
                 {/* destination main menu */}
                 {categories?.map((item, index) => (
                   <div key={index}>
@@ -47,26 +51,27 @@ const Dropdown = ({ categories }) => {
                           onMouseEnter={() => {
                             setIsCategoryHovered(index);
                           }}
-                          className={`font-semibold whitespace-normal text-[16px] hover:text-blue text-[#2D3134] py-[15px] px-[10px] flex justify-between gap-[7px] border-b border-[#2D3134]`}
+                          className={`font-semibold whitespace-normal text-[14px] hover:text-blue text-[#2D3134] py-[8px] px-[10px] flex justify-between gap-[7px] border-b border-[#2D3134]`}
                         >
                           {item?.package_categories?.length > 0 ? (
                             <Link
                               key={index}
                               to={`/country/${item?.id}`}
-                            >
-                              <p>{item?.name}</p>
+                            > 
+                              <p className="pl-[20px]">{item?.name}</p>
                             </Link>
                           ) : (
                             <Link
                               key={index}
                             
                             >
-                              <p>{item?.name}</p>
+                              <p className="pl-[20px]">{item?.name}</p>
                             </Link>
                           )}
                          
                           {item?.package_categories.length > 0 && (
                             <p className="text-[21px]">
+                            
                               <BiChevronRight />
                             </p>
                           )}
@@ -79,31 +84,25 @@ const Dropdown = ({ categories }) => {
                                 setIsDetinationHovered(null);
                                 setHoveredCategoryId(null);
                               }}
-                              className="absolute w-[150px] top-0 right-[-102%] bg-white flex flex-col text-dark text-start font-[16px] z-30 border border-[#A3A3A3] shadow-lg"
+                              className="absolute w-[100%]  top-0 right-[-100%] bg-white flex flex-col text-dark text-start font-[16px] z-30 border border-[#A3A3A3] shadow-lg"
                             >
+                              <div className=" "> 
                               {item?.package_categories?.map((item, index) => (
                                 <div key={index} className="relative">
                                   <div
                                     onMouseEnter={() => {
                                       setHoveredCategoryId(index);
                                     }}
-                                    className={`font-semibold whitespace-normal text-[16px] hover:text-blue text-[#2D3134] py-[15px] px-[10px] flex justify-between gap-[7px] border-b border-[#2D3134]`}
+                                    className={`font-semibold whitespace-normal text-[14px] hover:text-blue text-[#2D3134] py-[8px] px-[10px] flex justify-between gap-[7px] border-b border-[#2D3134]`}
                                   >
                                     {item?.packages && (
                                       <Link
                                         key={index}
                                         to={`/location/${item?.slug}`}
                                       >
-                                        <p>{item?.name}</p>
+                                        <p>{item?.name}   hello</p>
                                       </Link>
-                                    // ) : (
-                                    //   <Link
-                                    //     key={index}
-                                    //     to={`/details/${item?.slug}`}
-                                    //   >
-                                    //     <p>{item?.name}</p>
-                                    //   </Link>
-                                    // 
+                              
                                     ) 
                                   }
                                     {item?.packages.length > 0 && (
@@ -118,14 +117,14 @@ const Dropdown = ({ categories }) => {
                                         onMouseLeave={() =>
                                           setHoveredCategoryId(null)
                                         }
-                                        className="absolute w-[150px] top-0 right-[-102%] bg-white flex flex-col text-dark text-start font-[16px] z-30 border border-[#A3A3A3] shadow-lg"
+                                        className="absolute w-[100%]  top-0 right-[-100%] bg-white flex flex-col text-dark text-start font-[16px] z-30 border border-[#A3A3A3] shadow-lg"
                                       >
                                         <div>
                                           {item?.packages?.map(
                                             (item, index) => (
                                               <div
                                                 key={index}
-                                                className={`font-semibold whitespace-normal text-[16px] hover:text-blue text-[#2D3134] py-[15px] px-[10px] flex justify-between gap-[20px] border-b border-[#2D3134]`}
+                                                className={`font-semibold whitespace-normal text-[14px] hover:text-blue text-[#2D3134] py-[8px] px-[10px] flex justify-between gap-[20px] border-b border-[#2D3134]`}
                                               >
                                                 <Link
                                                   key={index}
@@ -148,13 +147,15 @@ const Dropdown = ({ categories }) => {
                                 <BsStopFill />
                               </div> */}
                             </div>
+                            </div>
                           )}
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
-            </div>
+            
+          </div>
           </div>
         )}
       </div>

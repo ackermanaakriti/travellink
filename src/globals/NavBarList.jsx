@@ -109,7 +109,7 @@ const NavBarList = () => {
                                         </Link>
                                         { item?.subCatagories?.length > 0 && (
                                           <p className="text-[21px]">
-                                            <BiChevronRight />
+                                            <BiChevronRight /> 
                                           </p>
                                         )}
                                         {activeNavItemIndexB === index &&
@@ -130,7 +130,7 @@ const NavBarList = () => {
                                                     to={item?.link}
                                                     className={`hover:text-blue text-[#2D3134] py-[15px] px-[10px] gap-[20px] border-b border-[#2D3134]`}
                                                   >
-                                                    <p>{item?.menuTitle}</p>
+                                                    <p>{item?.menuTitle} hello</p>
                                                   </Link>
                                                 )
                                               )}
