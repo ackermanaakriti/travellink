@@ -17,7 +17,7 @@ const PageTopComponent = ({title,image,setTextA,setTextB}) => {
             > 
             {
               setTextA && (
-            <p className='text-white text-[50px] font-semibold font-inter flex'>{title}</p>
+            <p className='text-white lg:text-[50px] sm:text-[38px] text-[36px] font-semibold font-inter flex'>{title}</p>
         )}                   
 
             </div>

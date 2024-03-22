@@ -67,6 +67,7 @@ const NavBarList = () => {
                       </div> */}
                       <div>
                         <div className=" hello w-max absolute top-0 left-[50%]  transform -translate-x-[50%] bg-white flex flex-col text-dark text-start font-[16px] z-30 border border-[#A3A3A3] shadow-lg">
+                          <div className="w-[180px]"> 
                           {/* catergory mapping */}
                           {item.Catagories.map((item, index) => (
                             <div
@@ -74,10 +75,10 @@ const NavBarList = () => {
                                 setActiveNavItemIndexA(index);
                               }}
                               key={index}
-                              className={`relative  hover:text-blue text-[#34342d] py-[15px] px-[10px] flex justify-between gap-[20px] border-b border-[#2D3134]`}
+                              className={`relative  hover:text-blue text-[14px] text-[#34342d] py-[8px] px-[10px] flex justify-between gap-[20px] border-b border-[#2D3134]`}
                             >
                               <Link to={item?.link}>
-                                <p>{item?.menuTitle}</p>
+                                <p className="text-[14px]">{item?.menuTitle}oo</p>
                               </Link>
                               { item?.subCatagories?.length > 0 && (
                                 <p className="text-[21px]">
@@ -142,6 +143,7 @@ const NavBarList = () => {
                                 )}
                             </div>
                           ))}
+                        </div>
                         </div>
                       </div>
                     </div>

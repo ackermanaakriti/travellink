@@ -17,7 +17,7 @@ const PackagesCard = ({data, link, Package}) => {
     const [isButtonHovered, setIsButtonHovered] = useState(false);
 
     return (
-        <div className='xl:w-1/3 md:w-1/2 w-full px-7'>
+        <div className='xl:w-1/3 md:w-1/2 w-full lg:px-7 sm:px-[5px]'>
             <div className='w-full'>
                 <div className='shadow-md overflow-hidden p-4 bg-white'>
                     <div className='w-full relative h-[255px] overflow-hidden rounded-[24px]'>
